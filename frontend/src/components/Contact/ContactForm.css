@@ -1,0 +1,77 @@
+/* Contact Section Styles */
+.contact-section {
+ 
+    background: transparent;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    width: 50%;
+    /* border: 1px solid red; */
+}
+
+.contact-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+
+
+/* Form Styles */
+.contact-form {
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    /* width: 100%; */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    /* border: 1px solid #ffffff; */
+    background: transparent;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid snow;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-input:focus {
+    border-color: #007bff;
+
+}
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.562);
+
+}
+
+.contact-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Success or Error Message */
+.contact-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #28a745; /* Green for success */
+}
