@@ -6,8 +6,9 @@ import axios from "axios";
 const CreateClient = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null); // State to store the selected file
 
+  // Handle form submission
   const handleSubmit = async (values) => {
     if (!file) {
       message.error("Please upload an image.");
@@ -41,7 +42,7 @@ const CreateClient = () => {
   // Handle image upload
   const handleUpload = (info) => {
     const selectedFile = info.file;
-    setFile(selectedFile);
+    setFile(selectedFile); // Store the selected file
     message.success(`${selectedFile.name} selected successfully.`);
   };
 
@@ -88,7 +89,7 @@ const CreateClient = () => {
             name="image"
             listType="picture"
             maxCount={1}
-            beforeUpload={() => false}
+            beforeUpload={() => false} // Disable auto-upload
             onChange={handleUpload}
           >
             <Button icon={<UploadOutlined />}>Select Image</Button>

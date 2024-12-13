@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Projects.css";
-import bigImg from "../../assets/pexels-andres-ayrton-6578391.svg";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

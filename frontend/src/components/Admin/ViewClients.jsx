@@ -11,7 +11,7 @@ const ViewClients = () => {
   const fetchClients = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/clients");
+      const response = await axios.get("/api/clients"); // Adjust the endpoint as per your backend
       setClients(response.data);
     } catch (error) {
       console.error("Error fetching clients:", error);
@@ -21,21 +21,25 @@ const ViewClients = () => {
     }
   };
 
+  // Delete a client
   const deleteClient = async (id) => {
+    console.log("Attempting to delete client with ID:", id); // Debugging statement
     try {
-      await axios.delete(`/api/clients/${id}`);
+      await axios.delete(`/api/clients/${id}`); // Ensure this matches your backend route
       message.success("Client deleted successfully!");
-      fetchClients();
+      fetchClients(); // Refresh the client list after deletion
     } catch (error) {
       console.error("Error deleting client:", error.response?.data || error);
       message.error("Failed to delete client. Please try again.");
     }
   };
 
+  // Fetch clients on component mount
   useEffect(() => {
     fetchClients();
   }, []);
 
+  // Table columns
   const columns = [
     {
       title: "Name",
@@ -91,7 +95,7 @@ const ViewClients = () => {
         <Table
           dataSource={clients}
           columns={columns}
-          rowKey={(record) => record._id}
+          rowKey={(record) => record._id} // Ensure _id is used as the unique row key
         />
       )}
     </div>

@@ -64,6 +64,7 @@ const AddProject = () => {
           <Input placeholder="Enter project name" />
         </Form.Item>
 
+        {/* Project Description */}
         <Form.Item
           label="Project Description"
           name="description"
@@ -78,6 +79,7 @@ const AddProject = () => {
           />
         </Form.Item>
 
+        {/* Project Image */}
         <Form.Item
           label="Upload Image"
           name="image"
@@ -92,7 +94,7 @@ const AddProject = () => {
         >
           <Upload.Dragger
             name="files"
-            beforeUpload={() => false}
+            beforeUpload={() => false} // Prevent automatic upload
             accept="image/*"
           >
             <p className="ant-upload-drag-icon">
@@ -107,6 +109,7 @@ const AddProject = () => {
           </Upload.Dragger>
         </Form.Item>
 
+        {/* Submit Button */}
         <Form.Item>
           <Button type="primary" htmlType="submit" loading={loading} block>
             Create Project

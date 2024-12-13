@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../assets/Rectangle.svg";
+import backgroundImage from "../assets/Rectangle.png";
 
 const LearnMoreSection = () => {
   return (

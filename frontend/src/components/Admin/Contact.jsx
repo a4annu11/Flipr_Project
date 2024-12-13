@@ -6,11 +6,12 @@ const Contact = () => {
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Fetch contacts from the backend
   useEffect(() => {
     const fetchContacts = async () => {
       try {
         const response = await axios.get("/api/contact");
-        setContacts(response.data);
+        setContacts(response.data); // Assuming the response is an array of contacts
         setLoading(false);
       } catch (err) {
         console.error("Error fetching contacts:", err);

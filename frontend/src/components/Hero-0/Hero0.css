@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; 
-    overflow: hidden; 
+    position: relative; /* Required for positioning pseudo-elements */
+    overflow: hidden; /* Ensure pseudo-elements don’t overflow */
 }
 
 .hero::before {
@@ -16,13 +16,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1; 
+    background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity */
+    z-index: 1; /* Ensure it stays below the content */
 }
 
 .hero-text, .hero > * {
     position: relative;
-    z-index: 2; 
+    z-index: 2; /* Bring text and other content above the pseudo-element */
 }
 
 .hero-text {

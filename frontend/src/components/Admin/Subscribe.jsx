@@ -6,7 +6,7 @@ const Subscibe = () => {
   const [subscriptions, setSubscriptions] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch subscriptions
+  // Fetch subscriptions from the backend
   useEffect(() => {
     const fetchSubscriptions = async () => {
       try {
@@ -20,8 +20,9 @@ const Subscibe = () => {
     };
 
     fetchSubscriptions();
-  }, []);
+  }, []); // Empty array ensures this runs only once when the component mounts
 
+  // Define table columns
   const columns = [
     {
       title: "Email",
@@ -35,7 +36,7 @@ const Subscibe = () => {
       <Table
         dataSource={subscriptions}
         columns={columns}
-        rowKey="_id"
+        rowKey="_id" // Ensure each row has a unique key, assuming `_id` exists
         loading={loading}
       />
     </div>

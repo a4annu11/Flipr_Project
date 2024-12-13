@@ -1,6 +1,6 @@
 /* Footer.css */
 .footer-section {
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #ffffff;
     padding: 20px 0;
   }
@@ -34,6 +34,6 @@
   }
   
   .footer-right a:hover {
-    color: #1e90ff; 
+    color: #1e90ff; /* Highlight color for hover effect */
   }
   

@@ -6,9 +6,10 @@ const { Meta } = Card;
 
 const ViewProjects = () => {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [deleting, setDeleting] = useState(null);
+  const [loading, setLoading] = useState(false); // Manage spinner for API actions
+  const [deleting, setDeleting] = useState(null); // Track which project is being deleted
 
+  // Fetch all projects from the backend
   useEffect(() => {
     const fetchProjects = async () => {
       setLoading(true);
@@ -28,8 +29,8 @@ const ViewProjects = () => {
 
   // Handle delete project
   const handleDelete = async (id) => {
-    setDeleting(id);
-    console.log("Deleting project with ID:", id);
+    setDeleting(id); // Show spinner for the specific project being deleted
+    console.log("Deleting project with ID:", id); // Log the project ID
     try {
       const response = await axios.delete(
         `http://localhost:5000/api/projects/${id}`
@@ -65,9 +66,9 @@ const ViewProjects = () => {
                     alt={project.name}
                     src={project.imageUrl}
                     style={{
-                      width: "100%",
-                      height: "200px",
-                      objectFit: "cover",
+                      width: "100%", // Ensures responsiveness within the card
+                      height: "200px", // Fixed height
+                      objectFit: "cover", // Ensures the image maintains aspect ratio
                     }}
                   />
                 }

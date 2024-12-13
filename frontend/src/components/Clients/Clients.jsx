@@ -22,6 +22,7 @@ const Clients = () => {
             <div key={client._id} className="client-card">
               <img
                 src={client.imageUrl}
+                // src={s2Img}
                 alt={client.name}
                 className="client-image"
               />

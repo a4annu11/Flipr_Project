@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero.css";
-import mainImg from "../../assets/Ellipse 11.svg";
-import s1Img from "../../assets/Ellipse 12.svg";
-import s2Img from "../../assets/Ellipse 13.svg";
+import mainImg from "../../assets/Ellipse 11.png";
+import s1Img from "../../assets/Ellipse 12.png";
+import s2Img from "../../assets/Ellipse 13.png";
 
 const Hero = () => {
   return (
@@ -16,6 +16,7 @@ const Hero = () => {
       </div>
       <div className="hero-images">
         <div className="hero-main-image">
+          {/* Placeholder for Main Image */}
           <img src={mainImg} alt="" />
         </div>
         <div className="hero-small-images">

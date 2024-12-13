@@ -1,8 +1,8 @@
 import React from "react";
 import "./About.css";
-import bigImg from "../../assets/pexels-andres-ayrton-6578391.svg";
-import s2img from "../../assets/pexels-fauxels-3182834.svg";
-import s1img from "../../assets/pexels-brett-sayles-2881232.svg";
+import bigImg from "../../assets/pexels-andres-ayrton-6578391.jpg";
+import s2img from "../../assets/pexels-brett-sayles-2881232-1.png";
+import s1img from "../../assets/pexels-fauxels-3182834.png";
 
 const AboutUs = () => {
   return (
