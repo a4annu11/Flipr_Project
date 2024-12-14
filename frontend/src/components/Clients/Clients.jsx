@@ -28,7 +28,11 @@ const Clients = () => {
               />
               <h3 className="client-name">{client.name}</h3>
               <p className="client-designation">{client.designation}</p>
-              <p className="client-description">{client.description}</p>
+              <p className="client-description">
+                {client.description.length > 50
+                  ? `${client.description.slice(0, 60)}...`
+                  : client.description}
+              </p>
             </div>
           ))}
         </div>

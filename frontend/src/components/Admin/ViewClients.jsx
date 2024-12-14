@@ -72,16 +72,26 @@ const ViewClients = () => {
       title: "Actions",
       key: "actions",
       render: (_, record) => (
-        <Popconfirm
-          title="Are you sure to delete this client?"
-          onConfirm={() => deleteClient(record._id)}
-          okText="Yes"
-          cancelText="No"
-        >
-          <a style={{ color: "red" }}>
-            <DeleteOutlined />
-          </a>
-        </Popconfirm>
+        <div style={{ textAlign: "center" }}>
+          {" "}
+          {/* Center align */}
+          <Popconfirm
+            title="Are you sure to delete this client?"
+            onConfirm={() => deleteClient(record._id)}
+            okText="Yes"
+            cancelText="No"
+          >
+            <a
+              style={{
+                color: "red",
+                fontSize: "16px",
+                display: "inline-block",
+              }}
+            >
+              <DeleteOutlined />
+            </a>
+          </Popconfirm>
+        </div>
       ),
     },
   ];

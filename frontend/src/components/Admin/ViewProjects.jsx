@@ -82,7 +82,16 @@ const ViewProjects = () => {
                   </Button>,
                 ]}
               >
-                <Meta title={project.name} description={project.description} />
+                <Meta
+                  title={project.name}
+                  description={
+                    project.description
+                      ? project.description.length > 100
+                        ? `${project.description.slice(0, 100)}...`
+                        : project.description
+                      : "No description available."
+                  }
+                />
               </Card>
             </Col>
           ))}
